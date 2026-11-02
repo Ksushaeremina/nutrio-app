@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title>Nutrio</title>
+    <link rel="stylesheet" href="nutrio.css">
+  </head>
+  <body id="top">
+
+    <header class="site-header">
+      <h1 class="logo">Nutrio<span>.</span></h1>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#top" class="active">Главная</a>
+        <a href="#features">Возможности</a>
+        <a href="#how">Как это работает</a>
+        <a href="#order">Заявка</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Умное планирование питания</p>
+          <h2>Меню под вашу цель, рассчитанное алгоритмом</h2>
+          <p>Укажите цель и ограничения — система подберёт меню по калориям и БЖУ и сразу составит список покупок.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#order">Подобрать меню</a>
+            <a class="btn btn--ghost" href="#how">Как это работает</a>
+          </div>
+        </div>
+
+        <aside class="menu-preview" aria-label="Пример дневного меню">
+          <div class="preview-head">
+            <h3>Меню на день</h3>
+            <span class="preview-kcal">1 840 ккал</span>
+          </div>
+          <ul class="meals">
+            <li><span class="meal-name">Завтрак</span><span class="meal-dish">Овсянка с ягодами</span><span class="meal-kcal">420</span></li>
+            <li><span class="meal-name">Обед</span><span class="meal-dish">Индейка с булгуром</span><span class="meal-kcal">630</span></li>
+            <li><span class="meal-name">Перекус</span><span class="meal-dish">Греческий йогурт</span><span class="meal-kcal">190</span></li>
+            <li><span class="meal-name">Ужин</span><span class="meal-dish">Лосось с овощами</span><span class="meal-kcal">600</span></li>
+          </ul>
+          <div class="macros">
+            <div class="macro">
+              <div class="macro-label"><span>Белки</span><span>135 / 140 г</span></div>
+              <div class="bar" aria-hidden="true"><span class="bar-fill bar-fill--protein"></span></div>
+            </div>
+            <div class="macro">
+              <div class="macro-label"><span>Жиры</span><span>60 / 65 г</span></div>
+              <div class="bar" aria-hidden="true"><span class="bar-fill bar-fill--fat"></span></div>
+            </div>
+            <div class="macro">
+              <div class="macro-label"><span>Углеводы</span><span>190 / 200 г</span></div>
+              <div class="bar" aria-hidden="true"><span class="bar-fill bar-fill--carb"></span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="features" id="features">
+        <h2 class="section-title">Возможности системы</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🎯</span>
+            <h3>Расчёт под цель</h3>
+            <p>Суточная норма калорий и БЖУ считается под похудение, поддержание или набор веса.</p>
+            <button type="button" class="btn btn--ghost btn--small add-fav-btn">В избранное</button>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon" aria-hidden="true">⚙️</span>
+            <h3>Оптимизация меню</h3>
+            <p>Рецепты подбираются как решение задачи оптимизации с ограничениями по калориям и составу БЖУ.</p>
+            <button type="button" class="btn btn--ghost btn--small add-fav-btn">В избранное</button>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🛒</span>
+            <h3>Список покупок</h3>
+            <p>Из готового меню автоматически собирается список продуктов с нужным количеством.</p>
+            <button type="button" class="btn btn--ghost btn--small add-fav-btn">В избранное</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="favorites" id="favorites">
+        <h2 class="section-title">Избранное</h2>
+        <div class="info-box">
+          <p class="favorites-empty" id="favorites-empty">Пока пусто</p>
+          <ul class="favorites-list" id="favorites-list"></ul>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <h2 class="section-title">Как это работает</h2>
+        <ol class="steps">
+          <li>
+            <h3>Цель и ограничения</h3>
+            <p>Выберите цель, тип питания и исключите аллергены.</p>
+          </li>
+          <li>
+            <h3>Расчёт нормы</h3>
+            <p>Система определяет суточную калорийность и целевые БЖУ.</p>
+          </li>
+          <li>
+            <h3>Подбор меню</h3>
+            <p>Алгоритм выбирает из базы рецептов блюда, которые укладываются в норму.</p>
+          </li>
+          <li>
+            <h3>Список покупок</h3>
+            <p>Получите меню на день или неделю и готовый список продуктов.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="split">
+        <div class="split-text">
+          <h2 class="section-title">Учитываем ваши ограничения</h2>
+          <p>Аллергии и тип питания входят в задачу подбора как жёсткие условия: блюда с исключёнными продуктами в меню не попадут.</p>
+          <ul class="chips">
+            <li>Без глютена</li>
+            <li>Без лактозы</li>
+            <li>Вегетарианское</li>
+            <li>Веганское</li>
+            <li>Без орехов</li>
+            <li>Без яиц</li>
+          </ul>
+        </div>
+        <aside class="shopping" aria-label="Пример списка покупок">
+          <h3>Список покупок</h3>
+          <ul class="shopping-list">
+            <li><span class="item">Овсяные хлопья</span><span class="qty">400 г</span></li>
+            <li><span class="item">Филе индейки</span><span class="qty">600 г</span></li>
+            <li><span class="item">Булгур</span><span class="qty">300 г</span></li>
+            <li><span class="item">Греческий йогурт</span><span class="qty">4 шт</span></li>
+            <li><span class="item">Лосось</span><span class="qty">400 г</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="review" id="review">
+        <h2 class="section-title">Отзыв клиента</h2>
+        <div class="info-box">
+          <div class="review-content" id="review-content">Нажмите кнопку, чтобы загрузить отзыв</div>
+          <button type="button" class="btn" id="load-review-btn">Показать отзыв</button>
+        </div>
+      </section>
+
+      <section class="promo">
+        <div class="promo-card">
+          <span class="badge">Бета-версия</span>
+          <h2>Попробуйте первое меню</h2>
+          <p>Оставьте заявку прямо сейчас — подберём меню под вашу цель и пришлём список покупок.</p>
+          <p class="promo-timer">До конца акции: <span id="promo-timer">05:00</span></p>
+        </div>
+      </section>
+
+      <section class="form-section" id="order">
+        <h2 class="section-title">Оставить заявку</h2>
+        <form class="form" action="/submit" method="POST" novalidate>
+
+          <div class="field">
+            <label class="required" for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label class="required" for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label class="required" for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Не короче 8 символов" minlength="8" autocomplete="new-password" required>
+          </div>
+
+          <div class="field">
+            <label class="required" for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 900 000-00-00" pattern="\+?[0-9\s\-\(\)]{10,18}" autocomplete="tel" required>
+          </div>
+
+          <fieldset class="fieldset">
+            <legend class="required">Ваша цель</legend>
+            <div class="choices">
+              <div class="choice">
+                <input type="radio" id="goal-lose" name="goal" value="lose" required>
+                <label for="goal-lose">Похудение</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="goal-maintain" name="goal" value="maintain">
+                <label for="goal-maintain">Поддержание веса</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="goal-gain" name="goal" value="gain">
+                <label for="goal-gain">Набор массы</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend class="required">Формат меню</legend>
+            <div class="choices">
+              <div class="choice">
+                <input type="radio" id="period-day" name="period" value="day" required>
+                <label for="period-day">На день</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="period-week" name="period" value="week">
+                <label for="period-week">На неделю</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field field--center">
+            <label for="diet">Тип питания</label>
+            <select id="diet" name="diet">
+              <option value="regular">Обычное</option>
+              <option value="vegetarian">Вегетарианское</option>
+              <option value="vegan">Веганское</option>
+              <option value="gluten-free">Без глютена</option>
+              <option value="lactose-free">Без лактозы</option>
+            </select>
+          </div>
+
+          <fieldset class="fieldset">
+            <legend>Исключить аллергены</legend>
+            <div class="choices">
+              <div class="choice">
+                <input type="checkbox" id="allergen-nuts" name="allergens" value="nuts">
+                <label for="allergen-nuts">Орехи</label>
+              </div>
+              <div class="choice">
+                <input type="checkbox" id="allergen-milk" name="allergens" value="milk">
+                <label for="allergen-milk">Молоко</label>
+              </div>
+              <div class="choice">
+                <input type="checkbox" id="allergen-eggs" name="allergens" value="eggs">
+                <label for="allergen-eggs">Яйца</label>
+              </div>
+              <div class="choice">
+                <input type="checkbox" id="allergen-fish" name="allergens" value="fish">
+                <label for="allergen-fish">Рыба</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn">Отправить заявку</button>
+
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Nutrio. Учебный проект — лабораторная работа №3.</p>
+    </footer>
+
+  <script src="nutrio.js"></script>
+  </body>
+</html>
